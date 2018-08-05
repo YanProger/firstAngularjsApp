@@ -1,0 +1,13 @@
+<div class="emailsContainer">
+    <label class="headLabel">Share <span>Board name</span> with other</label>
+    <div class="editorsArea">
+        <span class="email {{validateEmail(email) ? 'valid' : 'not-valid'}}" ng-repeat="email in emails">
+            {{email}}<span id="{{$index}}" class="remove" ng-click="removeEmail($event)">x</span>
+        </span>
+        <input id="addEmail"
+               ng-blur="handleBlur($event)"
+               ng-keypress="handleKeypress($event)"
+               ng-paste="handlePaste($event)"
+               placeholder="add more people..."/>
+    </div>
+</div>
