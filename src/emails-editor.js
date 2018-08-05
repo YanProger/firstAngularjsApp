@@ -26,7 +26,7 @@ angular.module('components', [])
                 };
                 $scope.handlePaste = function (e) {
                     e.target.value = e.clipboardData.getData('text');
-                    e.target.blur(e);
+                    e.target.blur();
                 };
 
 
