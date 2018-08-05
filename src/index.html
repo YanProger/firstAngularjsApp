@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div ng-controller="emailsEditorController">
-        <emails-editor emails="emails"></emails-editor>
+    <div ng-controller="emailsEditorController as cntr">
+        <emails-editor emails="cntr.emails"></emails-editor>
 
         <div class="buttons">
-            <button ng-click="addRandomEmail()">Add email</button>
-            <button ng-click="getEmailCount()">Get email count</button>
+            <button ng-click="cntr.addRandomEmail()">Add email</button>
+            <button ng-click="cntr.getEmailCount()">Get email count</button>
         </div>
     </div>
 </body>

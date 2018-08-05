@@ -1,13 +1,13 @@
 angular.module('app', ['components'])
-    .controller('emailsEditorController', function($scope) {
-        $scope.emails = [
+    .controller('emailsEditorController', function() {
+        this.emails = [
             'sidorov@gmail.com'
         ];
-        $scope.addRandomEmail = function () {
+        this.addRandomEmail = function () {
             let datems = new Date().getTime() % 1000000;
-            $scope.emails.push('example' + datems + (datems % 2 === 0 ?  '@ex.com' : ''));
+            this.emails.push('example' + datems + (datems % 2 === 0 ?  '@ex.com' : ''));
         };
-        $scope.getEmailCount = function () {
+        this.getEmailCount = function () {
             alert(this.emails.length);
             return this.emails.length;
         };
